@@ -13,6 +13,8 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
 		integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
 	</script>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
 </head>
 
@@ -49,8 +51,8 @@
 				<a href="/login">Sign In / Sign Up</a>
 		</div>
 	</nav>
-	<article class="container mt-3">
-		<!--callout-->
+<!-- alert -->
+	<!-- <div class="container alert-container">
 		<div class="row d-none d-sm-block">
 			<div class="col-12">
 				<div class="alert alert-warning">
@@ -59,24 +61,34 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-12 jumbotron text-center">
-			<!-- full width,jumb=graybox to make the block to stand out, text in this block is centered aligned -->
-			<section>
-				<h1>The finest whiskys delivered to yur doorstep.</h1>
-				<p>Sign up today to start receiving the world's best whiskeys every month</p>
-				<s class="d-none d-sm-inline">$19.99</s><strong><mark>First one is free!</mark></strong>
-				<!-- mark and s tags are displaying in the same line, for this reason uses d-sm-inline instead of d-sm-block -->
-				<span class="d-none d-sm-inline"><br></span>
-				<button class="btn btn-success btn-lg" data-toggle="modal" data-target="#signUpModal">Sign up!</button>
-				<p class="text-muted">
-					<small>You must be over 18 to sign up to our service. Please, drink responsively</small></p>
-				<!-- text-muted is bootstrap-->
-			</section>
-		</div>
-		<!-- /.callout-->
-		<hr>
+	</div> -->
+        <!-- /alert -->
+    	<!--callout-->
+	<div class="container-fluid callout-container"><!-- fluid makes the container to occupy the entire width -->
+		<div class="opaque-overlay">
+            <div class="col-12 jumbotron text-center">
+                <!-- full width,jumb=graybox to make the block to stand out, text in this block is centered aligned -->
+                <section>
+                    <h1 class="jumbotron-header">The finest whiskys delivered to your doorstep.</h1>
+                    <hr class="block-devider block-devider--orange">
+                    <p class="lead">Sign up today to start receiving the world's best whiskeys every month
+                    <s class="d-none d-sm-inline">$19.99</s><strong><mark>First one is free!</mark></strong>
+                    <!-- mark and s tags are displaying in the same line, for this reason uses d-sm-inline instead of d-sm-block -->
+                    <span class="d-none d-sm-inline"><br></span></p>
+                    <button class="btn btn-lg btn--cta btn--red" data-toggle="modal" data-target="#signUpModal">Sign up!</button>
+                    <p class="text-muted">
+                        <small>You must be over 18 to sign up to our service. Please, drink responsively</small></p>
+                    <!-- text-muted is bootstrap-->
+                </section>
+            </div>
+        </div>
+	</div>
+	<!-- /.callout-->
 
-		<!-- Quotes -->
+
+	<!-- Quotes -->
+	<div class="container quotes-container">
+
 		<section class="quotes">
 			<div class="row">
 				<div class="col-12 my-5">
@@ -121,12 +133,13 @@
 
 			</div>
 
-			</div>
-		</section>
-		<!-- /quotes -->
-		<hr>
+	</div>
+	</section>
+	</div>
+	<!-- /quotes -->
 
-		<!-- features -->
+	<!-- features -->
+	<div class="features-container">
 		<section>
 			<div class="row">
 				<div class="col-12">
@@ -186,11 +199,12 @@
 					</div>
 				</div><!-- end of row for features-->
 		</section>
-	</article>
-    <!-- modal window -->
-	<div class="modal" tabindex="-1" role="dialog" id="signUpModal"> <!-- screen reader will read this like of code as "dialog" thanks to the attribute role -->
+	</div>
+	<!-- modal window -->
+	<div class="modal" tabindex="-1" role="dialog" id="signUpModal">
+		<!-- screen reader will read this like of code as "dialog" thanks to the attribute role -->
 		<!-- tabindex = to control order of moving focus from one element to another when pressing the keyboard key "Tab" -->
-		
+
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -214,7 +228,7 @@
 								<label for="repeatPassword">Password</label>
 								<input type="password" class="form-control" id="repeatPassword" placeholder="Repeat Password">
                     </div>
-                    <button type="submit" class="btn btn-success">Submit</button>
+								<button type="submit" class="btn btn-success">Submit</button>
 					</form>
 				</div>
 
