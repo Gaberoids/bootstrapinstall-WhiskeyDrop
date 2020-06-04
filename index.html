@@ -19,19 +19,66 @@
 </head>
 
 <body>
-	<!-- all classes in the navbar are bootstrap -->
-	<nav class="navbar navbar-light bg-light navbar-expand-sm ">
-		<!-- light color theme light color backgroud, expand= for responsive, fixed-top = keep navbar fixed on the top of the screen as it scrows -->
-		<a href="/" class="navbar-brand">Whiskey Drop</a>
-		<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+	<div class="container-fluid navalert-container">
+		<!-- alert -->
+		<div class="container-fluid alert-container">
+			<div class="row d-none d-sm-block">
+				<div class="col-12">
+					<div class="site-wide-alert alert alert-warning">
+						<strong>Sale Now On!</strong>We've got a sale on. Get a 12-month subscription for 6! <a
+							href="">See
+							rere for details!</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /alert -->
+		<nav class="navbar navbar-dark navbar-expand-sm ">
+			<a href="/" class="navbar-brand">Whiskey Drop</a>
+			<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span></button>
-		<!-- push to the right, data-target mean that the the button will be used for a trigger to a collapsable element (data-toggle) Accessible Rich Internet Applications (ARIA) is a set of attributes that define ways to make web content and web applications (especially those developed with JavaScript) more accessible to people with disabilities. the span class provides the three bar looking graph for the button -->
-		<div class="collapse navbar-collapse" id="navbarNavDropdown">
-			<ul class="navbar-nav mr-auto">
-				<!-- mr-=push content to the left -->
-				<li class="active nav-item mr-2"><a href="/" class="nav-link">Home</a></li>
-				<!-- active=highlighted mr=spacing-->
-				<li class="nav-item mr-2"><a href="/about" class="nav-link">About</a></li>
+			<!-- push to the right, data-target mean that the the button will be used for a trigger to a collapsable element (data-toggle) Accessible Rich Internet Applications (ARIA) is a set of attributes that define ways to make web content and web applications (especially those developed with JavaScript) more accessible to people with disabilities. the span class provides the three bar looking graph for the button -->
+			<div class="collapse navbar-collapse" id="navbarNavDropdown">
+				<ul class="navbar-nav mr-auto">
+					<!-- mr-=push content to the left -->
+					<li class="active nav-item mr-2"><a href="/" class="nav-link">Home</a></li>
+					<!-- active=highlighted mr=spacing-->
+					<li class="nav-item mr-2"><a href="/about" class="nav-link">About</a></li>
+					<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#"
+							id="navbarNavDropdownLink" role="button" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">Whiskeys</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+							<a class="dropdown-item" href="#">Irish</a>
+							<a class="dropdown-item" href="#">Scotch</a>
+							<a class="dropdown-item" href="#">Japanese</a>
+							<a class="dropdown-item" href="#">American</a>
+						</div>
+					</li>
+
+					<!-- active=highlighted mr=spacing-->
+					<li class="nav-item mr-2 d-block d-sm-none"><a href="/login" class="nav-link">Log In/Sign Up</a>
+					</li>
+				</ul>
+			</div>
+			<div class="d-none d-md-block">
+				<p class="navbar-text my-auto mr-2"><i>Great whiskey delivered to your door!</i>
+					<a href="/login">Sign In / Sign Up</a>
+			</div>
+		</nav>
+	</div>
+	<!-- all classes in the navbar are bootstrap -->
+	<!-- <nav class="navbar navbar-light bg-light navbar-expand-sm ">
+		light color theme light color backgroud, expand= for responsive, fixed-top = keep navbar fixed on the top of the screen as it scrows -->
+	<!-- <a href="/" class="navbar-brand">Whiskey Drop</a>
+		<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span></button> -->
+	<!-- push to the right, data-target mean that the the button will be used for a trigger to a collapsable element (data-toggle) Accessible Rich Internet Applications (ARIA) is a set of attributes that define ways to make web content and web applications (especially those developed with JavaScript) more accessible to people with disabilities. the span class provides the three bar looking graph for the button -->
+	<!-- <div class="collapse navbar-collapse" id="navbarNavDropdown">
+			<ul class="navbar-nav mr-auto"> -->
+	<!-- mr-=push content to the left -->
+	<!-- <li class="active nav-item mr-2"><a href="/" class="nav-link">Home</a></li> -->
+	<!-- active=highlighted mr=spacing-->
+	<!-- <li class="nav-item mr-2"><a href="/about" class="nav-link">About</a></li>
 				<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarNavDropdownLink"
 						role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -40,90 +87,134 @@
 						<a class="dropdown-item" href="#">Japanese</a>
 						<a class="dropdown-item" href="#">American</a>
 					</div>
-				</li>
+				</li> -->
 
-				<!-- active=highlighted mr=spacing-->
-				<li class="nav-item mr-2 d-block d-sm-none"><a href="/login" class="nav-link">Log In/Sign Up</a></li>
+	<!-- active=highlighted mr=spacing-->
+	<!-- <li class="nav-item mr-2 d-block d-sm-none"><a href="/login" class="nav-link">Log In/Sign Up</a></li>
 			</ul>
 		</div>
 		<div class="d-none d-md-block">
 			<p class="navbar-text my-auto mr-2"><i>Great whiskey delivered to your door!</i>
 				<a href="/login">Sign In / Sign Up</a>
 		</div>
-	</nav>
-<!-- alert -->
-	<!-- <div class="container alert-container">
-		<div class="row d-none d-sm-block">
-			<div class="col-12">
-				<div class="alert alert-warning">
-					<strong>Sale Now On!</strong>We've got a sale on. Get a 12-month subscription for 6! <a href="">See
-						rere for details!</a>
-				</div>
-			</div>
-		</div>
-	</div> -->
-        <!-- /alert -->
-    	<!--callout-->
-	<div class="container-fluid callout-container"><!-- fluid makes the container to occupy the entire width -->
+	</nav> -->
+
+
+	<!--callout-->
+	<div class="container-fluid callout-container">
+		<!-- fluid makes the container to occupy the entire width -->
 		<div class="opaque-overlay">
-            <div class="col-12 jumbotron text-center">
-                <!-- full width,jumb=graybox to make the block to stand out, text in this block is centered aligned -->
-                <section>
-                    <h1 class="jumbotron-header">The finest whiskys delivered to your doorstep.</h1>
-                    <hr class="block-devider block-devider--orange">
-                    <p class="lead">Sign up today to start receiving the world's best whiskeys every month
-                    <s class="d-none d-sm-inline">$19.99</s><strong><mark>First one is free!</mark></strong>
-                    <!-- mark and s tags are displaying in the same line, for this reason uses d-sm-inline instead of d-sm-block -->
-                    <span class="d-none d-sm-inline"><br></span></p>
-                    <button class="btn btn-lg btn--cta btn--red" data-toggle="modal" data-target="#signUpModal">Sign up!</button>
-                    <p class="text-muted">
-                        <small>You must be over 18 to sign up to our service. Please, drink responsively</small></p>
-                    <!-- text-muted is bootstrap-->
-                </section>
-            </div>
-        </div>
+			<div class="col-12 jumbotron text-center">
+				<!-- full width,jumb=graybox to make the block to stand out, text in this block is centered aligned -->
+				<section>
+					<h1 class="jumbotron-header">The finest whiskys delivered to your doorstep.</h1>
+					<hr class="block-devider block-devider--orange">
+					<p class="lead">Sign up today to start receiving the world's best whiskeys every month
+						<s class="d-none d-sm-inline">$19.99</s><strong><mark>First one is free!</mark></strong>
+						<!-- mark and s tags are displaying in the same line, for this reason uses d-sm-inline instead of d-sm-block -->
+						<span class="d-none d-sm-inline"><br></span></p>
+					<button class="btn btn-lg btn--cta btn--red" data-toggle="modal" data-target="#signUpModal">Sign up!</button>
+					<p class="text-muted">
+						<small>You must be over 18 to sign up to our service. Please, drink responsively</small></p>
+					<!-- text-muted is bootstrap-->
+				</section>
+			</div>
+		</div> 
 	</div>
 	<!-- /.callout-->
 
 
 	<!-- Quotes -->
-	<div class="container quotes-container">
+	<div class="container-wrapper">
+		<div class="container quotes-container content-container">
+			<section class="quotes">
+				<div class="row">
+					<div class="col-12 page-header">
+						<!-- my-5 = vertical space, add space -->
+						<h2 class="text-uppercase">Quotes:</h2>
+						<hr class="block-devider ">
+
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12 col-md-6">
+						<div class="media">
+							<div class="d-none d-sm-block">
+								<img src="images/girl-image.png" class="rounded-circle mr-3" height=100px>
+								<!-- make image a circle and space 3 to the right(?) -->
+							</div>
+							<div class="media-body">
+								<!-- enclose entire blockquote -->
+								<blockquote class="blockquote">
+									<p>I've been introduced to more than 10 great international whiskeys I never knew
+										about.
+									</p>
+									<p>- Jane Doe</p>
+								</blockquote>
+							</div>
+						</div>
+					</div>
+
+					<!--blockquote tag is for semanthic purpose. class blockquote is bootstrap-->
+					<div class="col-12 col-md-6">
+						<div class="media">
+							<div class="d-none d-sm-block">
+								<img src="images/guy-image.png" class="rounded-circle mr-3" height=100px>
+								<!-- make image a circle and space 3 to the right(?) -->
+							</div>
+							<div class="media-body">
+								<!-- enclose entire blockquote -->
+								<blockquote class="blockquote">
+									<p>I havent been sober for months</p>
+									<p>- Jane Doe</p>
+								</blockquote>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</section>
+		</div>
+	</div>
+
+	<!-- all bootstrap in between this comment -->
+	<!-- <div class="container quotes-container">
 
 		<section class="quotes">
 			<div class="row">
-				<div class="col-12 my-5">
-					<!-- my-5 = vertical space, add space -->
-					<h2 class="text-uppercase">Quotes:</h2>
+				<div class="col-12 my-5"> -->
+	<!-- my-5 = vertical space, add space -->
+	<!-- <h2 class="text-uppercase">Quotes:</h2>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-12 col-md-6">
 					<div class="media">
 						<div class="d-none d-sm-block">
-							<img src="images/girl-image.png" class="rounded-circle mr-3" height=100px>
-							<!-- make image a circle and space 3 to the right(?) -->
-						</div>
-						<div class="media-body">
-							<!-- enclose entire blockquote -->
-							<blockquote class="blockquote">
+							<img src="images/girl-image.png" class="rounded-circle mr-3" height=100px> -->
+	<!-- make image a circle and space 3 to the right(?) -->
+	<!-- </div>
+						<div class="media-body"> -->
+	<!-- enclose entire blockquote -->
+	<!-- <blockquote class="blockquote">
 								<p>I've been introduced to more than 10 great international whiskeys I never knew about.
 								</p>
 								<p>- Jane Doe</p>
 							</blockquote>
 						</div>
 					</div>
-				</div>
+				</div> -->
 
-				<!--blockquote tag is for semanthic purpose. class blockquote is bootstrap-->
-				<div class="col-12 col-md-6">
+	<!--blockquote tag is for semanthic purpose. class blockquote is bootstrap-->
+	<!-- <div class="col-12 col-md-6">
 					<div class="media">
 						<div class="d-none d-sm-block">
-							<img src="images/guy-image.png" class="rounded-circle mr-3" height=100px>
-							<!-- make image a circle and space 3 to the right(?) -->
-						</div>
-						<div class="media-body">
-							<!-- enclose entire blockquote -->
-							<blockquote class="blockquote">
+							<img src="images/guy-image.png" class="rounded-circle mr-3" height=100px> -->
+	<!-- make image a circle and space 3 to the right(?) -->
+	<!-- </div>
+						<div class="media-body"> -->
+	<!-- enclose entire blockquote -->
+	<!-- <blockquote class="blockquote">
 								<p>I havent been sober for months</p>
 								<p>- Jane Doe</p>
 							</blockquote>
@@ -133,21 +224,92 @@
 
 			</div>
 
-	</div>
-	</section>
-	</div>
+	</div> -->
+	<!-- /all bootstrap in between this comment-->
+
 	<!-- /quotes -->
 
 	<!-- features -->
-	<div class="features-container">
+	<div class="container-wrapper container-wrapper--red">
+		<div class="container features-container content-container">
+			<section>
+				<div class="row">
+					<div class="col-12">
+						<div class="col-12 page-header">
+							<!-- my-5 = vertical space, add space -->
+							<h2 class="text-uppercase">Features:</h2>
+<hr class="block-devider block-divider--short block-devider--white">
+							<!-- text-uppercase is bootstrap-->
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12 col-md-6 col-lg-4">
+							<div class="feature">
+								<h3><i class="fas fa-gift d-none d-sm-block"></i> Feature 1
+									<span class="badge badge-success">NEW!</span></h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+									incididunt
+									ut
+									labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+									ullamco
+									laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+									reprehenderit
+									in
+									voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+									cupidatat
+									non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+								<p><a class="btn btn-sm btn-light">Read More</a></p>
+							</div>
+						</div>
+						<div class="col-12 col-md-6 col-lg-4">
+							<div class="feature">
+								<h3><i class="fas fa-credit-card d-none d-sm-block"></i> Feature 2</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+									incididunt
+									ut
+									labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+									ullamco
+									laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+									reprehenderit
+									in
+									voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+									cupidatat
+									non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+								<p><a class="btn btn-sm btn-light">Read More</a></p>
+							</div>
+						</div>
+						<div class="col-12 d-md-none d-lg-block col-lg-4">
+							<!-- d-md-non = this div will not be displayed on md or bigger -->
+							<div class="feature">
+								<h3><i class="fas fa-times-circle d-none d-sm-block"></i> Feature 3</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+									incididunt
+									ut
+									labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+									ullamco
+									laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+									reprehenderit
+									in
+									voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+									cupidatat
+									non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+								<p><a class="btn btn-sm btn-light">Read More</a></p>
+							</div>
+						</div>
+					</div>
+			</section>
+		</div>
+	</div>
+	<!-- all bootstrap in between this comment -->
+	<!-- <div class="features-container">
 		<section>
 			<div class="row">
 				<div class="col-12">
-					<div class="col-12my-5">
-						<!-- my-5 = vertical space, add space -->
-						<h2 class="text-uppercase">Features:</h2>
-						<!-- text-uppercase is bootstrap-->
-					</div>
+					<div class="col-12my-5"> -->
+	<!-- my-5 = vertical space, add space -->
+	<!-- <h2 class="text-uppercase">Features:</h2> -->
+	<!-- text-uppercase is bootstrap-->
+	<!-- </div>
 				</div>
 				<div class="row">
 					<div class="col-12 col-md-6 col-lg-4">
@@ -181,9 +343,9 @@
 							<p><a class="btn btn-sm btn-light">Read More</a></p>
 						</div>
 					</div>
-					<div class="col-12 d-md-none d-lg-block col-lg-4">
-						<!-- d-md-non = this div will not be displayed on md or bigger -->
-						<div class="feature">
+					<div class="col-12 d-md-none d-lg-block col-lg-4"> -->
+	<!-- d-md-non = this div will not be displayed on md or bigger -->
+	<!-- <div class="feature">
 							<h3><i class="fas fa-times-circle d-none d-sm-inline"></i> Feature 3</h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
 								ut
@@ -197,9 +359,16 @@
 							<p><a class="btn btn-sm btn-light">Read More</a></p>
 						</div>
 					</div>
-				</div><!-- end of row for features-->
-		</section>
-	</div>
+				</div> 
+            </section>
+	    </div>
+                
+                 -->
+	<!-- end of row for features-->
+	<!-- /all bootstrap in between this comment -->
+
+
+
 	<!-- modal window -->
 	<div class="modal" tabindex="-1" role="dialog" id="signUpModal">
 		<!-- screen reader will read this like of code as "dialog" thanks to the attribute role -->
